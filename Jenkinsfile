@@ -24,7 +24,7 @@ pipeline{
         stage('continuous Deliver on Webserver') {
             steps {
                 sh 'ssh root@172.31.0.173'
-                 sh 'scp /root/.jenkins/workspace/maven-web-app-deploy/target/maven-web-application.war root@172.31.0.173:/mnt/apache-tomcat-9.0.80/webapps'
+                 sh 'scp /root/var/lib/jenkins/workspace/maven-web-app-deploy/target/maven-web-application.war root@172.31.0.173:/mnt/apache-tomcat-9.0.80/webapps'
             }
         } 
 }
