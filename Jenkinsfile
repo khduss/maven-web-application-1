@@ -16,8 +16,8 @@ pipeline{
         }
             stage('continuous upload/backup') {
             steps {
-                sh 'cp /root/var/lib/jenkins/workspace/maven-web-app-deploy/target/maven-web-application.war /opt/tomcat/webapps'
-                sh 'cp /root/var/lib/jenkins/workspace/maven-web-app-deploy/target/maven-web-application.war  /mnt/Backup_snapshot'
+                sh 'sudo cp /root/var/lib/jenkins/workspace/maven-web-app-deploy/target/maven-web-application.war /opt/tomcat/webapps'
+                sh 'sudo cp /root/var/lib/jenkins/workspace/maven-web-app-deploy/target/maven-web-application.war  /mnt/Backup_snapshot'
             }
                
         }
